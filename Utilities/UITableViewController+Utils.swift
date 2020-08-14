@@ -17,3 +17,11 @@ extension UITableViewController {
                                          for: indexPath)
   }
 }
+
+extension UITableView {
+  public func getCell(indexPath: IndexPath,
+                      identifier: String) -> UITableViewCell {
+    return self.dequeueReusableCell(withIdentifier: identifier,
+                                    for: indexPath)
+  }
+}
